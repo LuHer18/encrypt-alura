@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+:root {
+    --primary-color: #051330;
+    --secundary-color: #F5A900;
+    --aux-color: #B58B2D ;
+    --text-color: #fcffd7;
+    --complement-color: #3559A0;
+    --primary-font:"Orbitron", sans-serif; 
+    --secondary-font: "Montserrat", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    background-color: var(--primary-color);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem ;
+    align-items: center;
+    gap: 2rem;
+}
+.header {
+    display: flex;
+    color: var(--secundary-color);
+    font-family: var(--primary-font);
+    align-items: center;
+    font-size: 2rem;
+}
+
+.container-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 116rem;
+    height: 94.4rem;
+    margin: 0 1rem;
+    gap: 11.2rem;
+    
+}
+
+.container-contenido-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 68rem;
+    height: 60rem;
+    
+}
+
+.contenido-input-text {
+    flex: 1;
+    width: 100%;
+    resize: none;
+    padding: 0.5rem;
+    height: 70.1rem;
+    background-color: var(--primary-color);
+    border: var(--secundary-color) 0.5rem solid;
+    border-radius: 0.5rem;
+}
+
+.contenido-input-buttons {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.contenido-input-button {
+    
+    background-color: var(--secundary-color);
+    width: 32.8rem;
+    padding: 2.4rem;
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 2.4rem;
+    color: var(--primary-color);
+}
+
+.contenido-input-button:hover {
+    background-color: var(--aux-color);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
+
+
+
+
+
+.footer {
+    position: fixed;
+    bottom: 5%;
+}
+
+
+
+@media (max-width:60rem) {
+    .container-contenido {
+        width: 34.3rem;
+        height: 49.1rem;
+        flex-direction: column;
+        
+    }
+}
