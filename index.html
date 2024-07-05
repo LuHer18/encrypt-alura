@@ -22,21 +22,52 @@
         <section class="container-contenido-input">
             <textarea class="contenido-input-text" name="text-input" id="text-input"
                 placeholder="Ingrese el texto aquí."></textarea>
-            <p class="container-input-advertencia">Solo letras minusculas y sin acentos</p>
+            <div class="container-input-advertencia">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2_231)">
+                            <path
+                                d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM8 4C7.87361 4.00007 7.74863 4.02662 7.63312 4.07793C7.51761 4.12924 7.41413 4.20418 7.32934 4.29791C7.24456 4.39165 7.18035 4.5021 7.14084 4.62217C7.10134 4.74223 7.08743 4.86923 7.1 4.995L7.45 8.502C7.46176 8.63977 7.5248 8.76811 7.62664 8.86164C7.72849 8.95516 7.86173 9.00705 8 9.00705C8.13827 9.00705 8.27151 8.95516 8.37336 8.86164C8.4752 8.76811 8.53824 8.63977 8.55 8.502L8.9 4.995C8.91257 4.86923 8.89866 4.74223 8.85915 4.62217C8.81965 4.5021 8.75544 4.39165 8.67066 4.29791C8.58587 4.20418 8.48239 4.12924 8.36688 4.07793C8.25137 4.02662 8.12639 4.00007 8 4ZM8.002 10C7.73678 10 7.48243 10.1054 7.29489 10.2929C7.10736 10.4804 7.002 10.7348 7.002 11C7.002 11.2652 7.10736 11.5196 7.29489 11.7071C7.48243 11.8946 7.73678 12 8.002 12C8.26722 12 8.52157 11.8946 8.70911 11.7071C8.89664 11.5196 9.002 11.2652 9.002 11C9.002 10.7348 8.89664 10.4804 8.70911 10.2929C8.52157 10.1054 8.26722 10 8.002 10Z"
+                                fill="currentColor" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2_231">
+                                <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                <p>
+                    Solo letras minusculas y sin acentos.
+                </p>
+            </div>
+
             <div class="contenido-input-buttons">
                 <button class="contenido-input-button">Encrypt</button>
                 <button class="contenido-input-button">Decrypt</button>
             </div>
         </section>
         <section class="container-contenido-output content">
-            <textarea name="text-output" class="contenido-output-text" id="text-output" placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
-            <img class="contenido-output-img" src="./src/assets/hacker-image.png" alt="imagen-hacker">
+            <textarea name="text-output" class="contenido-output-text" id="text-output"
+                placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
+            <img class="contenido-output-img hidden" src="./src/assets/hacker-image.png" alt="imagen-hacker">
             <button class="contenido-output-button is-active">Copy</button>
     </main>
     <footer class="footer">
-        <h2 class="footer-title">Hecho por Luis Herrera</h2>
-        <a class="footer-link" href="https://www.linkedin.com/in/luis-herrera-26b706161/" target="_blank">Linkedin</a>
-        <a class="footer-link" href="https://github.com/LuHer18" target="_blank">GitHub</a>
+        <h2 class="footer-title">Hecho por <strong>Luis Herrera</strong></h2>
+        <a class="footer-link" href="https://www.linkedin.com/in/luis-herrera-26b706161/" target="_blank"><svg
+                height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path fill="currentColor"
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                </path>
+            </svg></a>
+        <a class="footer-link" href="https://github.com/LuHer18" target="_blank"> <svg width="32" height="32"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path fill="currentColor"
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                </path>
+            </svg></a>
     </footer>
 
 </body>
