@@ -1,3 +1,6 @@
+/* import Swal from 'sweetalert2/dist/sweetalert2.js' */
+/* import 'sweetalert2/src/sweetalert2.scss' */
+
 //constante
 
 const keyVowels = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -16,6 +19,16 @@ let onEncrypt = document.querySelector("#encrypt");
 let onDecrypt = document.querySelector("#decrypt");
 let onCopy = document.querySelector("#copy");
 
+//alerta
+function customAlert () {
+    return Swal.fire({
+        titleText: 'Solo letras minusculas y sin acentos.',
+        icon: 'warning',
+        background: '#051330',
+        color: '#F5A900',
+        confirmButtonColor: '#F5A900'
+      })
+}
 
 //validación
 
@@ -27,7 +40,7 @@ function validate(text) {
 //funciones de encriptar y desencriptar
 function encrypt(text) {
     if (validate(text) == true) {
-        alert('Solo letras minusculas y sin acentos.');
+        customAlert();
         textInput.value = '';
         return '';
     } else {
@@ -43,7 +56,7 @@ function encrypt(text) {
 function decrypt(text) {
 
     if (validate(text) == true) {
-        alert('Solo letras minusculas y sin acentos.');
+        customAlert();
         textInput.value = '';
         return '';
     } else {
@@ -75,7 +88,17 @@ function showContent() {
 async function copy(text) {
     try {
         await navigator.clipboard.writeText(text)
-        alert('Contenido copiado al portapapeles')
+        Swal.fire({
+            titleText: 'Texto copiado en portapapel',
+            icon: 'success',
+            background: '#051330',
+            color: '#F5A900',
+            timer: 1000,
+            timerProgressBar: true,
+            showConfirmButton: false
+            
+
+        })
     } catch (err) {
         alert('Error al copiar')
     }
