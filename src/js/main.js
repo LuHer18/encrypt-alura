@@ -70,7 +70,19 @@ function showContent() {
     };
 }
 
+//funcion copiar
+
+async function copy(text) {
+    try {
+        await navigator.clipboard.writeText(text)
+        alert('Contenido copiado al portapapeles')
+    } catch (err) {
+        alert('Error al copiar')
+    }
+}
+
 //eventos de botones
+
 
 onEncrypt.addEventListener("click", () => {
     textOutPut.value = encrypt(textInput.value);
@@ -81,4 +93,8 @@ onDecrypt.addEventListener("click", () => {
     textOutPut.value = decrypt(textInput.value);
     showContent();
 })
+onCopy.addEventListener("click", () => {
+    copy(textOutPut.value);
+})
+
 
