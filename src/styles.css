@@ -308,6 +308,9 @@ body {
     opacity: 1;
 }
 
+.hidden {
+    display: none;
+}
 
 /* .candado-cerrado {
     opacity: 1;

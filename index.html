@@ -42,12 +42,12 @@
             </div>
 
             <div class="contenido-input-buttons">
-                <button class="contenido-input-button">Encrypt</button>
-                <button class="contenido-input-button">Decrypt</button>
+                <button class="contenido-input-button" id="encrypt">Encrypt</button>
+                <button class="contenido-input-button" id="decrypt">Decrypt</button>
             </div>
         </section>
-        <section class="container-contenido-output content">
-            <textarea name="text-output" class="contenido-output-text" id="text-output"
+        <section class="container-contenido-output ">
+            <textarea name="text-output" class="contenido-output-text" disabled id="text-output"
                 placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
                 <div class="center">
                     <div class="large">
@@ -96,7 +96,7 @@
                     </g>
                 </svg>
                 </div>
-            <button class="contenido-output-button is-active">Copy</button>
+            <button class="contenido-output-button" id="copy">Copy</button>
     </main>
     <footer class="footer">
         <h2 class="footer-title">Hecho por <strong>Luis Herrera</strong></h2>
@@ -115,7 +115,7 @@
                 </path>
             </svg></a>
     </footer>
-
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>
