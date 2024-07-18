@@ -12,7 +12,8 @@ let textOutPut = document.querySelector(".contenido-output-text");
 //contenido activo-inactivo UI
 let contentOutPut = document.querySelector(".container-contenido-output");
 let circleElement = document.querySelector(".center")
-let lockContainer = document.querySelector(".lock-container")
+let closedLock = document.getElementById('closed-lock');
+let openLock = document.getElementById('open-lock');
 
 //botones
 let onEncrypt = document.querySelector("#encrypt");
@@ -73,13 +74,22 @@ function showContent() {
         onCopy.classList.add("is-active")
         contentOutPut.classList.add("content")
         circleElement.classList.add("hidden")
-        lockContainer.classList.add("hidden")
+        closedLock.classList.add("hidden")
+        setTimeout(() => {
+            openLock.classList.remove('hidden');
+          }, 400);
+          setTimeout(() => {
+            openLock.classList.add('hidden');
+            openLock.style.display = 'none';
+          }, 800);
 
     } else {
         onCopy.classList.remove("is-active")
         contentOutPut.classList.remove("content")
         circleElement.classList.remove("hidden")
-        lockContainer.classList.remove("hidden")
+        closedLock.classList.remove("hidden")
+        openLock.classList.add('hidden');
+        openLock.style.display = 'block';
     };
 }
 
@@ -89,7 +99,7 @@ async function copy(text) {
     try {
         await navigator.clipboard.writeText(text)
         Swal.fire({
-            titleText: 'Texto copiado en portapapel',
+            titleText: 'Texto copiado en el portapapel',
             icon: 'success',
             background: '#051330',
             color: '#F5A900',
