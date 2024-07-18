@@ -50,13 +50,24 @@ body {
 }
 .header {
     display: flex;
-    text-align: center;
+    gap: 1rem;
+    align-items: center;
     color: var(--secundary-color);
-    font-family: var(--primary-font);
     margin: 1.5rem ;
     justify-content: center;
+    font-family: var(--primary-font);
     font-size: 2rem;
+    
 }
+
+.header svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
 
 .container-contenido {
     display: flex;
@@ -201,6 +212,7 @@ body {
 }
 
 .footer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,46 +250,46 @@ body {
 }
 
 .large, .medium, .small {
-    padding: 20px;
+    padding: 2rem;
     border-radius: 50%;
 }
 
 .large {
-    border-top: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #051330;
-    border-left: 5px solid #051330;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid #051330;
+    border-left: 0.5rem solid #051330;
     animation: large 2s linear infinite;
 }
 
 .medium {
-    border-top: 5px solid #051330;
-    border-right: 5px solid #051330;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
+    border-top: 0.5rem solid #051330;
+    border-right: 0.5rem solid #051330;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
     animation: medium 2s linear infinite;
 }
 
 .small {
-    border-top: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #051330;
-    border-left: 5px solid #051330;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid #051330;
+    border-left: 0.5rem solid #051330;
     animation: small 2s linear infinite;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     background-color: transparent;
     border-radius: 50%;
-    padding: 90px;
+    padding: 9rem;
 }
 
 .lock-container {
     position: absolute;
-    width: 70px;  /* Ajusta el tamaño según necesites */
-    height: 70px;
+    width: 7rem; 
+    height: 7rem;
     cursor: pointer; 
     top: 50%;
     left: 50%;
@@ -380,7 +392,39 @@ body {
 
 
 @media (max-width:600px) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+
     .container-contenido {
+        flex-direction: column;
+        align-items: center;
         width: 34.3rem;
+    }
+    .container-contenido-input {
+        width: 100%;
+        
+    }
+
+    .contenido-input-buttons {
+        flex-direction: column;
+        gap: 2.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenido-input-button:hover {
+        transform: scale(1);
+    }
+
+    .container-contenido-output{
+        width: 100%;
+    }
+    .contenido-output-button:hover{
+        transform: scale(1);
+    }
+
+    .dot {
+        padding: 4rem;
     }
 }
